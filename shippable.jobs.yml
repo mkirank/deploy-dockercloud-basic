@@ -1,26 +1,25 @@
 jobs:
 
-  - name: deploy-kubernetes-basic_runCI
+  - name: deploy-dockercloud-basic_runCI
     type: runCI
     steps:
-      - OUT: deploy-kubernetes-basic-img
+      - OUT: deploy-dockercloud-basic-image
 
-  - name: deploy-kubernetes-basic-manifest
+  - name: deploy-dockercloud-basic-manifest
     type: manifest
     steps:
-      - IN: deploy-kubernetes-basic-img
-      - IN: deploy-kubernetes-basic-img-options
+      - IN: deploy-dockercloud-basic-image
       - TASK: managed
     flags:
-      - deploy-kubernetes-basic
+      - deploy-dockercloud-basic
 
-#kubernetes deploy job
-  - name: kube-deploy
+#dockercloud deploy job
+  - name: deploy-dockercloud-basic-deploy
     type: deploy
     steps:
-      - IN: deploy-kubernetes-basic-manifest
-      - IN: deploy-kubernetes-basic-kube-cluster
+      - IN: deploy-dockercloud-basic-manifest
+      - IN: deploy-dockercloud-basic-cluster
       - TASK: managed
         deployMethod: upgrade
     flags:
-      - deploy-kubernetes-basic
+      - deploy-dockercloud-basic
