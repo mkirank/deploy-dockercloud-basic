@@ -14,5 +14,7 @@ resources:
   - name: ddcb-cluster
     type: cluster
     integration: dr-docker-cloud    #replace with your docker cloud integration name
+    pointer:
+          sourceName: "deploy-docker-cloud"
     flags:
       - deploy-dockercloud-basic
