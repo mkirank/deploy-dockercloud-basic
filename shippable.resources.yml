@@ -15,6 +15,6 @@ resources:
     type: cluster
     integration: dr-docker-cloud    #replace with your docker cloud integration name
     pointer:
-          sourceName: "deploy-docker-cloud"
+          sourceName: "deploy-docker-cloud" #node cluster name
     flags:
       - deploy-dockercloud-basic
