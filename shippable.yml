@@ -20,6 +20,8 @@ env:
 
 build:
 
+  pre_ci_boot:
+    options: "--net=host"
   # http://docs.shippable.com/ci/shippableyml/#ci
   ci:
     # npm mirrors can sometimes be flacky, better to use shippable_retry
