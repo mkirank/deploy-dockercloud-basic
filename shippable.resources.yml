@@ -1,7 +1,7 @@
 resources:
   - name: ddcb-image
     type: image
-    integration: docker-subint    #replace with your Docker Hub integration name
+    integration: kiran-docker-subint    #replace with your Docker Hub integration name
     pointer:
       sourceName: "devopsrecipes/deploy-dockercloud-basic"  #replace with your image name on Docker Hub
       isPull: false
@@ -13,7 +13,7 @@ resources:
   #docker cloud cluster
   - name: ddcb-cluster
     type: cluster
-    integration: docker-subint    #replace with your docker cloud integration name
+    integration: kiran-docker-subint    #replace with your docker cloud integration name
     pointer:
           sourceName: "deploy-docker-cloud" #node cluster name
     flags:
