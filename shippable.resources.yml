@@ -13,7 +13,7 @@ resources:
   #docker cloud cluster
   - name: ddcb-cluster
     type: cluster
-    integration: kiran-docker-subint    #replace with your docker cloud integration name
+    integration: docker-cld-int    #replace with your docker cloud integration name
     pointer:
           sourceName: "deploy-docker-cloud" #node cluster name
     flags:
